@@ -1,0 +1,24 @@
+﻿@model HastaTakipWeb.Models.Siniflar.Hakkimizda
+@{
+    ViewBag.Title = "HakkimizdaGetir6";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+@using (Html.BeginForm("HakimmizdaGüncelle6", "admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.baslik5,"Başlık")
+    @Html.TextBoxFor(x => x.baslik5, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.aciklama5,"Açıklama")
+    @Html.TextBoxFor(x => x.aciklama5, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-success">Güncelle</button>
+}
+

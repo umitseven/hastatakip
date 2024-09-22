@@ -1,0 +1,61 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<Doktorlar>
+@{
+    ViewBag.Title = "Doktorlarimiz";
+    Layout = "~/Views/Shared/_AnaSayfa.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Doktorlarımız</title>
+</head>
+<body>
+
+
+
+
+
+    <div style="display:flex; flex-wrap:wrap; margin-right:50px; margin-left:50px;justify-content:center; ">
+        @foreach (var x in Model)
+        {
+            <ul style="list-style-type:none;width:fit-content; text-align:center; margin:30px" class="container7">
+
+                <li class="doktor1">
+
+                    <img src="~/web_HastaTakip/img/doktor1.jpg" alt="doctor" style="width:300px ; object-fit: cover;border-top-left-radius: 15px; border-top-right-radius: 15px;text-decoration:none">
+
+                <ul class="özgecmis">
+                    
+                <ol class="bölüm">
+                    <h2 style="font-size:24px ;flex-direction: column;">
+                        Adı <hr style="border:1px solid black; margin-top: 4px;">
+                        <p style="font-size: 24px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 500;">@x.doktorAdi</p>
+                    </h2>
+
+                    <h2 style="font-size: 24px;flex-direction: column;">
+                        Soyadı<hr style="border:1px solid black; margin-top: 4px;">
+                        <p style="font-size: 24px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 500;">@x.doktorSoyadi</p>
+                    </h2>
+                </ol>
+                <ol class="bölüm">
+                    
+
+                    <h2 style="font-size: 24px;flex-direction: column;">
+                        Uzmanlık<hr style="border:1px solid black; margin-top: 4px;">
+                        <p style="font-size: 24px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 500;">@x.Uzmanlık</p>
+                    </h2>
+                </ol>
+                </ul>
+                </li>
+            </ul>
+        }
+    </div>
+
+
+
+
+
+</body>
+</html>
+

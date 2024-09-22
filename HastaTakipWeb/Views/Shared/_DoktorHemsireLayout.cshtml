@@ -1,0 +1,99 @@
+﻿
+@{
+    Layout = null;
+
+    string isim = Session["adsoyad"].ToString();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="adminpng" href="~/web_HastaTakip/img/adminlogo.jpg">
+    <link rel="logo" href="~/web_HastaTakip/img/logout.png">
+    <link rel="logo2" href="~/web_HastaTakip/img/home.png">
+    <link rel="logo3" href="~/web_HastaTakip/img/doctor.png">
+    <link rel="logo4" href="~/web_HastaTakip/img/mobile.png">
+    <link rel="logo5" href="~/web_HastaTakip/img/back-arrow.png">
+    <link rel="logo6" href="~/web_HastaTakip/img/image-.png">
+    <link rel="logo7" href="~/web_HastaTakip/img/info-button.png">
+    <link rel="logo8" href="~/web_HastaTakip/img/bookmark.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('searchInput').addEventListener('input', function () {
+                var searchText = this.value.toLowerCase();
+                var rows = document.querySelectorAll('table tbody tr');
+                rows.forEach(function (row) {
+                    var text = row.textContent.toLowerCase();
+                    if (text.includes(searchText)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 18%; ">
+
+        <div style="flex-wrap: inherit; display: flex; justify-content: center; margin-bottom: 60px;margin-top:10px">
+            <img style="width: 85px; border-radius: 50%; margin-left: 5%; margin-bottom: 5px;object-fit:cover " src="~/web_HastaTakip/img/doctorGirisSayfasi.png"></img>
+            <h3 style="font-size: 25px; font-weight: bold; font-family: 'Trebuchet MS'; width: 100%; margin-top: 30px;  " class="w3-bar-item">@isim</h3>
+        </div>
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/DoktorHemsireYönetim" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/AnaSayfa.png"></img>
+            Anasayfa
+        </a>
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/HastaBilgileri" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/audit.png"></img>
+            Hasta Kayıtları
+        </a>
+        @*<a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/RaporOlustur" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/report.png"></img>
+            Rapor Oluştur
+        </a>*@
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/BütünMuayeneBilgileri" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/medical-record.png"></img>
+            Muayene Bilgilerini Görüntüle
+        </a>
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/HastaRaporlari" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/patient.png"></img>
+            Hasta Bilgilerini Görüntüle
+        </a>
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/IlacBilgileriliste" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/medicine.png"></img>
+            İlaç Bilgilerini Görüntüle
+        </a>
+
+        <a style="font-size: 15px; font-weight: bold; color: black; justify-content: center; display: flex; bottom: 0px; position: absolute; margin-bottom: 20px; text-decoration: none !important" href="/AnaSayfa/CikisYap/" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/logout.png"></img>
+            Çıkış Yap
+        </a>
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left: 25%; padding-right: 10%">
+
+
+
+
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
+
+</body>
+</html>

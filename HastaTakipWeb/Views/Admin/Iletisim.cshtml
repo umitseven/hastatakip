@@ -1,0 +1,59 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<Iletisim>
+
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table style="margin-top:50px !important; " class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Mail</th>
+            <th>Mesaj</th>
+            <th>Tarih</th>
+            <th>Sil</th>
+
+        </tr>
+    </thead>
+
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;">
+                    @x.ad
+                </p>
+            </td>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;" class="text-wrap">
+                    @x.soyad
+                </p>
+            </td>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;"  class="text-wrap">
+                    @x.mail
+                </p>
+            </td>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;" class="text-wrap">
+                    @x.mesaj
+                </p>
+            </td>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;" class="text-wrap">
+                    @x.tarih
+                </p>
+
+            </td>
+
+            <td style="vertical-align: middle;"><a href="/Admin/IletisimSil/@x.id" class="btn btn-danger">Sil</a></td>
+        </tr>
+
+    }
+
+</table>

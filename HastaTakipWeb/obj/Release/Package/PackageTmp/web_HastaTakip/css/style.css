@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.body1 {
+    background-color: #3CAEA3;
+    min-height: 100vh;
+}
+
+.body2 {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.png1 {
+    width: 150px;
+    height: auto;
+    margin: auto;
+    top: 50%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -150%);
+}
+
+.container {
+    max-width: 1000px;
+    width: 1000px;
+    min-height: 580px;
+    background: white;
+    border-style: solid;
+    border-color: #3CAEA3;
+    padding: 0px 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.txtb {
+    border: 2px solid #adadad;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(25%, 27%);
+    margin: 10px auto;
+    width: 35%;
+    padding: 8px;
+    border-radius: 10px;
+    border-color: #3CAEA3;
+
+
+}
+
+.txtb input {
+    font-size: 15px;
+    color: #000000;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    transition: 0.5s;
+}
+
+.txtb3 {
+    border: 2px solid #adadad;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(25%, 80%);
+    margin: 10px auto;
+    width: 35%;
+    padding: 8px;
+    border-radius: 10px;
+    border-color: #3CAEA3;
+
+}
+
+.txtb3 input {
+    font-size: 15px;
+    color: #000000;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+}
+
+
+
+::placeholder {
+    color: #aaa;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+}
+
+.logbtn {
+    width: 40%;
+    height: 40px;
+    background: #3CAEA3;
+    border: 2px solid #3CAEA3;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    margin: 30px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(5%, 0%);
+    display: grid;
+    float: left;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.logbtn:hover {
+    background: none;
+    color: #3CAEA3;
+    transition: 0.5s;
+}
+
+.logbtn2 {
+    width: 40%;
+    height: 40px;
+    background: #3CAEA3;
+    border: 2px solid #3CAEA3;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    margin: 30px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(5%, 0%);
+    display: grid;
+    float: left;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.logbtn2:hover {
+    background: none;
+    color: #3CAEA3;
+    transition: 0.5s;
+}
+
+.icon1 {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    opacity: 0.7;
+    top: 38%;
+    left: 55%;
+    transform: translate(10%, 10%);
+    margin: 10px auto;
+}
+
+
+.icon2 {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    opacity: 0.7;
+    top: 38%;
+    left: 55%;
+    transform: translate(5%, 10%);
+    margin: 55px auto;
+}
+
+.container2 {
+    max-width: 400px;
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.text {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 6px;
+    color: black;
+    padding-bottom: 5px;
+
+
+}
+
+
+.txtb2 {
+    position: relative;
+    margin: 10px auto;
+    width: 80%;
+    padding: 0px 10px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+
+}
+
+.txtb2 input {
+    width: 100%;
+    border-radius: 0px;
+    background: none;
+    padding: 0 5px;
+    font-size: 18px;
+    color: #000000;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #adadad;
+
+}
+
+.logbtn1 {
+    width: 70%;
+    height: 40px;
+    background: #3CAEA3;
+    border: 2px solid #3CAEA3;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 18px;
+    transition: 0.5s;
+    margin: 30px auto;
+    font-weight: bold;
+    display: block;
+    outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.logbtn1:hover {
+    background: none;
+    color: #3CAEA3;
+    transition: 0.5s;
+}
+
+.resim {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 1000px;
+        width: 70%;
+        /* Değişiklik: Genişlik oranı artırıldı */
+    }
+
+    .container2 {
+        max-width: 600px;
+        width: 50%;
+        /* Değişiklik: Genişlik oranı artırıldı */
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+        width: 70%;
+        /* Değişiklik: Genişlik oranı azaltıldı */
+    }
+
+    .container2 {
+        max-width: 650px;
+        width: 50%;
+        /* Değişiklik: Genişlik oranı azaltıldı */
+    }
+}
+
+label {
+    display: relative;
+    font-weight: bold;
+    color: #3CAEA3;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-left: auto;
+}
+
+.nvbar {
+    background-color: #3CAEA3;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.container3 {
+    max-width: 1024px;
+    width: 100%;
+    min-height: 100%;
+}
+
+.kayitbilgileri{
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 100%;
+    padding:10px;
+    overflow: hidden;
+    border-color: #3CAEA3;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+  }

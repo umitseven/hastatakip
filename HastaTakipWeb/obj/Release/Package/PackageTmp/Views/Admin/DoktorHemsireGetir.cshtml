@@ -1,0 +1,35 @@
+﻿@model HastaTakipWeb.Models.Siniflar.DoktorHemsire
+@{
+    ViewBag.Title = "DoktorHemsireGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("DoktorHemsireGüncelle", "admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Ad,"Ad")
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Soyad,"Soyad")
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Uzmanlık,"Uzmanlık Alanı")
+    @Html.TextBoxFor(x => x.Uzmanlık, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Poliklinik,"Poliklinik")
+    @Html.TextBoxFor(x => x.Poliklinik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Telefon,"Telefon Numarası")
+    @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.KimlikNumarası,"Kimlik Numarası")
+    @Html.TextBoxFor(x => x.KimlikNumarası, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+
+}
+
+

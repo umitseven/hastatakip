@@ -1,0 +1,44 @@
+﻿@model HastaTakipWeb.Models.Siniflar.MuayeneBilgileri
+@{
+    ViewBag.Title = "MuayeneGetir";
+    Layout = "~/Views/Shared/_DoktorHemsireLayout.cshtml";
+}
+
+<br />
+
+@using (Html.BeginForm("MuayeneGüncelle", "Admin", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.MuayeneId) <!-- MuayeneId gizli alan olarak gönderilir -->
+    @Html.LabelFor(x => x.MuayeneId, "Hasta Numarası")
+    @Html.TextBoxFor(x => x.MuayeneId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.HastaAdi, "Ad")
+    @Html.TextBoxFor(x => x.HastaAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.HastaSoyadi, "Soyad")
+    @Html.TextBoxFor(x => x.HastaSoyadi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.DoktorAdi, "Doktor Adı")
+    @Html.TextBoxFor(x => x.DoktorAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.MuayeneTarihi, "Muayene Tarihi")
+    @Html.TextBoxFor(x => x.MuayeneTarihi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Sikayet, "Şikayet")
+    @Html.TextBoxFor(x => x.Sikayet, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Bulgular, "Bulgular")
+    @Html.TextBoxFor(x => x.Bulgular, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tedavi, "Tedavi")
+    @Html.TextBoxFor(x => x.Tedavi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Notlar, "Notlar")
+    @Html.TextBoxFor(x => x.Notlar, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.KimlikNumarası, "Kimlik Numarası")
+    @Html.TextBoxFor(x => x.KimlikNumarası, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+}

@@ -1,0 +1,25 @@
+﻿@model HastaTakipWeb.Models.Siniflar.AnaSayfa
+@{
+    ViewBag.Title = "AnasayfaGetir3";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+@using (Html.BeginForm("AnasayfaGüncelle3", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.bölümresimleri3,"Resim URL")
+    @Html.TextBoxFor(x => x.bölümresimleri3, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.bölümadi3,"Başlık")
+    @Html.TextBoxFor(x => x.bölümadi3, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.aciklama3,"Açıklama")
+    @Html.TextAreaFor(x => x.aciklama3, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+}

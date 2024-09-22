@@ -1,0 +1,30 @@
+﻿@model HastaTakipWeb.Models.Siniflar.IlacBilgileri
+@{
+    ViewBag.Title = "IlacBilgisiEkle";
+    Layout = "~/Views/Shared/_DoktorHemsireLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.IlacAdi, "İlaç Adı")
+    @Html.TextBoxFor(x => x.IlacAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.IlacKullanımSekli, "İlaç Kullanım Şekli")
+    @Html.TextBoxFor(x => x.IlacKullanımSekli, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.IlacSahibi, "İlaç Sahibi")
+    @Html.TextBoxFor(x => x.IlacSahibi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.IlaciVerenDoktor, "İlacı Veren Doktor")
+    @Html.TextBoxFor(x => x.IlaciVerenDoktor, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.IlacVerilisTarihi, "İlaç Veriliş Tarihi")
+    @Html.TextBoxFor(x => x.IlacVerilisTarihi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.KimlikNumarası, "Kimlik Numarası")
+    @Html.TextBoxFor(x => x.KimlikNumarası, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Ekle</button>
+</form>
+

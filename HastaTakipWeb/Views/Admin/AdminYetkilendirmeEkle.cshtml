@@ -1,0 +1,27 @@
+﻿@model HastaTakipWeb.Models.Siniflar.Admin
+@{
+    ViewBag.Title = "AdminYetkilendirmeEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.kullaniciAdi)
+    @Html.TextBoxFor(x => x.kullaniciAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.sifre)
+    @Html.TextBoxFor(x => x.sifre, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.adSoyad)
+    @Html.TextBoxFor(x => x.adSoyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Yönetimid)
+    @Html.TextBoxFor(x => x.Yönetimid, new { @class = "form-control" })
+    <br />
+    <p><span style="color:red;">NOT:</span> <span style="color:green;">yönetim id:1</span> Admin girişi <span style="color:green;">yönetim id: 3</span> doktor veya hemşire girişi</p>
+
+
+    <button class="btn btn-success">Ekle</button>
+
+</form>

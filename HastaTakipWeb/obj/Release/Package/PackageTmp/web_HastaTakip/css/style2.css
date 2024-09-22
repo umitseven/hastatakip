@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+.topnav1 {
+    overflow: hidden;
+    background-color: #3CAEA3;
+    padding: 5px 16px;
+    display: -webkit-inline-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.topnav1 div a {
+    color: #f2f2f2;
+    /*padding: 5px 16px;*/
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.topnav1 a:hover {
+    color: #32716b;
+    background-color: none;
+    transition: 0.5s;
+}
+
+.topnav1 .icon {
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .topnav1 a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav1 a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav1.responsive {
+        position: relative;
+    }
+
+    .topnav1.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav1.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.HOME {
+    padding: 10px 120px;
+}
+
+
+.ftrk-posta {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    bottom: 0;
+    background-color: #3CAEA3;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+
+.ftrk-posta .colhh-sm-12 {
+    flex: 1 0 100%;
+    /* mobil cihazlarda tam genişlik alması için */
+    max-width: 33%;
+    /* genişlik hesaplama */
+    text-align: center;
+    /* içerik ortalamak */
+}
+
+
+.ftrk-posta .item1 {
+    display: inline-block;
+    /* içerikleri yan yana sırala */
+    
+}
+
+.ftrk-posta .ellipsis100 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+    
+}
+
+
+.ellipsis100 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-optical-sizing: auto;
+    margin-top: 5px;
+    font-size: 16px;
+    opacity: 0.9;
+    font-weight:10px;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: none;
+    
+}
+
+.a2 {
+    color: #f2f2f2;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+
+.hesapbilgileri{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+    width: fit-content;
+    
+    
+}
+.hr1{
+    width: 90%;
+    background-color: white;
+    height: 2px;
+    opacity: 0.5;
+    margin-top: 0px;
+    color: white;
+}
+
+.iconlar {
+    margin-bottom: 36px;
+    margin-top: 8px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.iconlar a {
+    margin: 0px 0px;
+    color: #f2f2f2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mycontainer {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.mycontainer img {
+    width: 100%;
+    height: 636px;
+    
+}
+
+section{
+    display: block;
+}
+
+.sectioncontainer{
+    width: 100%;
+}
+
+.bölümbilgileri{
+    width: 100%;
+    display: flex;
+    padding: 60px;
+}
+
+.mainclass{
+    width: 100%;
+    height: auto;
+    padding: 60px;
+}
+
+.yazılar{
+    padding-right: 96px;
+    width: 100%;
+    
+    justify-content: space-around;
+    
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+
+.yazılar2{
+    padding-left: 96px;
+    width: 100%;
+    
+    justify-content: space-around;
+    
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+
+.resimler{
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    object-fit: contain;
+    
+}
+
+.icerikrsm{
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    -webkit-border-radius: -webkit-calc(var(--mc-radius-small)/var(--mc-typography-font-size-root)*1*1rem);
+    -moz-border-radius: -moz-calc(var(--mc-radius-small)/var(--mc-typography-font-size-root)*1*1rem);
+    border-radius: -webkit-calc(var(--mc-radius-small)/var(--mc-typography-font-size-root)*1*1rem);
+    border-radius: -moz-calc(var(--mc-radius-small)/var(--mc-typography-font-size-root)*1*1rem);
+    border-radius: calc(var(--mc-radius-small)/var(--mc-typography-font-size-root)*1*1rem);
+}
+
+.bizitakipedin
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 60px;
+}   
+
+.abb{
+    margin-left: 100px;
+    display: grid;
+    justify-content: center;
+}

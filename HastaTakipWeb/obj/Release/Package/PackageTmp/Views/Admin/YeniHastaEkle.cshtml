@@ -1,0 +1,33 @@
+﻿@model HastaTakipWeb.Models.Siniflar.HastaBilgileri
+@{
+    ViewBag.Title = "YeniHastaEkle";
+    Layout = "~/Views/Shared/_DoktorHemsireLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Ad)
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Soyad)
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Cinsiyet)
+    @Html.TextBoxFor(x => x.Cinsiyet, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TelefonNumarası,"Telefon Numarası")
+    @Html.TextBoxFor(x => x.TelefonNumarası, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.DogumTarihi, "Doğum Tarihi")
+    @Html.TextBoxFor(x => x.DogumTarihi, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.KimlikNumarası,"Kimlik Numarası")
+    @Html.TextBoxFor(x => x.KimlikNumarası, new { @class = "form-control" })
+    <br />
+
+
+
+    <button class="btn btn-success">Ekle</button>
+
+</form>
+

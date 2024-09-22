@@ -1,0 +1,67 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<DoktorHemsire>
+@{
+    ViewBag.Title = "DoktorHemsire";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<input style="width: auto !important; float: right; margin-top: 20px; margin-bottom: 40px;" type="text" id="searchInput" class="form-control" placeholder="Search...">
+<a style="margin-bottom:10px !important;margin-top:20px" href="~/Admin/YeniDoktorHemsireEkle/" class="btn btn-success">Yeni Doktor Kayıt</a>
+<a style="margin-bottom:5px !important;margin-top:20px" href="~/Admin/PDFOLUSTURDoktorlarimiz/" class="btn btn-primary btn-sm">PDF</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Soyad</th>
+            <th>Uzmanlık</th>
+            <th>Poliklinik</th>
+            <th>Telefon</th>
+            <th>Kimlik Numarası</th>
+            <th style="vertical-align: middle; text-align: center">Güncelle</th>
+            <th style="vertical-align: middle; text-align: center">Sil</th>
+
+        </tr>
+    </thead>
+
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;">
+                    @x.Ad
+                </p>
+            </td>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;" class="text-wrap">
+                    @x.Soyad
+                </p>
+            </td>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;" class="text-wrap">
+                    @x.Uzmanlık
+                </p>
+            </td>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;" class="text-wrap">
+                    @x.Poliklinik
+                </p>
+            </td>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;" class="text-wrap">
+                    @x.Telefon
+                </p>
+            </td>
+            <td style="vertical-align: middle;">
+                <p style="margin: 0;" class="text-wrap">
+                    @x.KimlikNumarası
+                </p>
+            </td>
+
+            <td style="vertical-align: middle; text-align: center"><a href="/Admin/DoktorHemsireGetir/@x.id" class="btn btn-primary">güncelle</a></td>
+            <td style="vertical-align: middle; text-align: center"><a href="/Admin/DoktorHemsireSil/@x.id" class="btn btn-danger">Sil</a></td>
+
+        </tr>
+    }
+
+</table>

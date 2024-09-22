@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B2E8220-8EBF-4C54-8A9C-8D7546F1DF33}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HastaTakipWeb</RootNamespace>
+    <AssemblyName>HastaTakipWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44386</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AnaSayfaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Siniflar\Admin.cs" />
+    <Compile Include="Models\Siniflar\AnaSayfa.cs" />
+    <Compile Include="Models\Siniflar\DoktorHemsire.cs" />
+    <Compile Include="Models\Siniflar\HastaBilgileri.cs" />
+    <Compile Include="Models\Siniflar\HastaRaporlari.cs" />
+    <Compile Include="Models\Siniflar\IlacBilgileri.cs" />
+    <Compile Include="Models\Siniflar\MuayeneBilgileri.cs" />
+    <Compile Include="Models\Siniflar\Yetkilendirme.cs" />
+    <Compile Include="Models\Siniflar\Context.cs" />
+    <Compile Include="Models\Siniflar\Doktorlar.cs" />
+    <Compile Include="Models\Siniflar\Hakkimizda.cs" />
+    <Compile Include="Models\Siniflar\Iletisim.cs" />
+    <Compile Include="Models\Siniflar\TopImage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
+    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
+    <Content Include="Rotativa\wkhtmltoimage.exe" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\chart.js" />
+    <Content Include="Scripts\chart.min.js" />
+    <Content Include="web_HastaTakip\anasayfa.html" />
+    <Content Include="web_HastaTakip\css\style.css" />
+    <Content Include="web_HastaTakip\css\style2.css" />
+    <Content Include="web_HastaTakip\css\style3.css" />
+    <Content Include="web_HastaTakip\css\style4.css" />
+    <Content Include="web_HastaTakip\css\style5.css" />
+    <Content Include="web_HastaTakip\DoktorGiris.html" />
+    <Content Include="web_HastaTakip\Doktorlarimiz.html" />
+    <Content Include="web_HastaTakip\Giris.html" />
+    <Content Include="web_HastaTakip\hakkimizda.html" />
+    <Content Include="web_HastaTakip\HemsireGiris.html" />
+    <Content Include="web_HastaTakip\iletisim.html" />
+    <Content Include="web_HastaTakip\img\1077114.png" />
+    <Content Include="web_HastaTakip\img\adminlogo.jpg" />
+    <Content Include="web_HastaTakip\img\AnaSayfa.png" />
+    <Content Include="web_HastaTakip\img\audit.png" />
+    <Content Include="web_HastaTakip\img\Beklemeodasi.jpg" />
+    <Content Include="web_HastaTakip\img\callcenter.jpg" />
+    <Content Include="web_HastaTakip\img\data-analytics.png" />
+    <Content Include="web_HastaTakip\img\doctorGirisSayfasi.png" />
+    <Content Include="web_HastaTakip\img\doktor1.jpg" />
+    <Content Include="web_HastaTakip\img\email.png" />
+    <Content Include="web_HastaTakip\img\facebook.png" />
+    <Content Include="web_HastaTakip\img\flask.png" />
+    <Content Include="web_HastaTakip\img\instagram.png" />
+    <Content Include="web_HastaTakip\img\klipartz.com.png" />
+    <Content Include="web_HastaTakip\img\Laboratuvar.jpg" />
+    <Content Include="web_HastaTakip\img\linkedin.png" />
+    <Content Include="web_HastaTakip\img\logo1.png" />
+    <Content Include="web_HastaTakip\img\mail.png" />
+    <Content Include="web_HastaTakip\img\medical-record.png" />
+    <Content Include="web_HastaTakip\img\medicine.png" />
+    <Content Include="web_HastaTakip\img\patient.png" />
+    <Content Include="web_HastaTakip\img\pexels-klaus-nielsen-6303775.jpg" />
+    <Content Include="web_HastaTakip\img\profile.png" />
+    <Content Include="web_HastaTakip\img\report.png" />
+    <Content Include="web_HastaTakip\img\resim1.jpg" />
+    <Content Include="web_HastaTakip\img\resim2.jpg" />
+    <Content Include="web_HastaTakip\img\resim3.jpg" />
+    <Content Include="web_HastaTakip\img\resim4.jpg" />
+    <Content Include="web_HastaTakip\img\resim5.jpg" />
+    <Content Include="web_HastaTakip\img\search-interface-symbol.png" />
+    <Content Include="web_HastaTakip\img\Seven.svg" />
+    <Content Include="web_HastaTakip\img\Seven2.svg" />
+    <Content Include="web_HastaTakip\img\tcsaglikbakanli.png" />
+    <Content Include="web_HastaTakip\img\teknolojik.jpg" />
+    <Content Include="web_HastaTakip\img\telefon.png" />
+    <Content Include="web_HastaTakip\img\twitter.png" />
+    <Content Include="web_HastaTakip\img\user - Kopya.png" />
+    <Content Include="web_HastaTakip\img\World_Health_Organization_%282%29.png" />
+    <Content Include="web_HastaTakip\img\youtube.png" />
+    <Content Include="web_HastaTakip\kayitol.html" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="App_Browsers\qt.browser" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="web_HastaTakip\img\Trebuchet MS.ttf" />
+    <Content Include="Views\Shared\_AnaSayfa.cshtml" />
+    <Content Include="Views\AnaSayfa\Index.cshtml" />
+    <Content Include="Views\AnaSayfa\Hakkimizda.cshtml" />
+    <Content Include="Views\AnaSayfa\Doktorlarimiz.cshtml" />
+    <Content Include="Views\AnaSayfa\Iletisim.cshtml" />
+    <Content Include="Views\AnaSayfa\GirisYap.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\SevenSaglikGrubu.cshtml" />
+    <Content Include="Views\Admin\AnasayfaGetir.cshtml" />
+    <Content Include="Views\Admin\AnasayfaGetir2.cshtml" />
+    <Content Include="Views\Admin\AnasayfaGetir3.cshtml" />
+    <Content Include="Views\Admin\Hakkimizda.cshtml" />
+    <Content Include="Views\Admin\HakkimizdaGetir.cshtml" />
+    <Content Include="Views\Admin\HakkimizdaGetir2.cshtml" />
+    <Content Include="Views\Admin\HakkimizdaGetir3.cshtml" />
+    <Content Include="Views\Admin\HakkimizdaGetir4.cshtml" />
+    <Content Include="Views\Admin\HakkimizdaGetir5.cshtml" />
+    <Content Include="Views\Admin\HakkimizdaGetir6.cshtml" />
+    <Content Include="Views\Admin\TopImage.cshtml" />
+    <Content Include="Views\AnaSayfa\topimage.cshtml" />
+    <Content Include="Views\Admin\TopImageGetir.cshtml" />
+    <Content Include="Views\Admin\TopImageGetir2.cshtml" />
+    <Content Include="Views\Admin\TopImageGetir3.cshtml" />
+    <Content Include="Views\Admin\TopImageGetir4.cshtml" />
+    <Content Include="Views\Admin\TopImageGetir5.cshtml" />
+    <Content Include="Views\Admin\Doktorlarimiz.cshtml" />
+    <Content Include="Views\Admin\DoktorlarimizGetir.cshtml" />
+    <Content Include="Views\Admin\YeniDoktor.cshtml" />
+    <Content Include="Views\Admin\GirisIsim.cshtml" />
+    <Content Include="Views\Admin\Iletisim.cshtml" />
+    <Content Include="Views\Admin\DoktorHemsire.cshtml" />
+    <Content Include="Views\Admin\YeniDoktorHemsireEkle.cshtml" />
+    <Content Include="Views\Admin\DoktorHemsireGetir.cshtml" />
+    <Content Include="Views\Shared\_DoktorHemsireLayout.cshtml" />
+    <Content Include="Views\Admin\DoktorHemsireYönetim.cshtml" />
+    <Content Include="Views\Admin\AdminYetkilendirme.cshtml" />
+    <Content Include="Views\Admin\AdminGetir.cshtml" />
+    <Content Include="Views\Admin\AdminYetkilendirmeEkle.cshtml" />
+    <Content Include="Views\Admin\HastaBilgileri.cshtml" />
+    <Content Include="Views\Admin\HastaBilgileriGetir.cshtml" />
+    <Content Include="Views\Admin\YeniHastaEkle.cshtml" />
+    <Content Include="Views\Admin\IndexAnaSayfa.cshtml" />
+    <Content Include="Views\Admin\PDFOLUSTUR.cshtml" />
+    <Content Include="Views\Admin\PDFOLUSTURDoktorlarimiz.cshtml" />
+    <Content Include="Views\Admin\PDFOLUSTURYönetimPaneli.cshtml" />
+    <Content Include="Views\Admin\HastaRaporlari.cshtml" />
+    <Content Include="Views\Admin\RaporOlustur.cshtml" />
+    <Content Include="Views\Admin\MuayeneBilgileri.cshtml" />
+    <Content Include="Views\Admin\MuayeneBilgisiEkle.cshtml" />
+    <Content Include="Views\Admin\HastaRaporEkle.cshtml" />
+    <Content Include="Views\Admin\BütünMuayeneBilgileri.cshtml" />
+    <Content Include="Views\Admin\HastaRaporlariGetir.cshtml" />
+    <Content Include="Views\Admin\HastaRaporeGetir.cshtml" />
+    <Content Include="Views\Admin\MuayeneGetir.cshtml" />
+    <Content Include="Views\Admin\İlacBilgileri.cshtml">
+      <BrowseToURL>~/Admin/IlacBilgileri</BrowseToURL>
+    </Content>
+    <Content Include="Views\Admin\IlacBilgileri.cshtml" />
+    <Content Include="Views\Admin\IlacBilgileriliste.cshtml" />
+    <Content Include="Views\Admin\IlacBilgisiEkle.cshtml" />
+    <Content Include="Views\Admin\IlacBilgiGetir.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\HastaRaporlari\" />
+    <Folder Include="Views\IlacBilgileri\" />
+    <Folder Include="Views\MuayeneBilgileri\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49834</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44386/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

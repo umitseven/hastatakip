@@ -1,0 +1,64 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Hakkimizda";
+    Layout = "~/Views/Shared/_AnaSayfa.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Hakkımızda</title>
+</head>
+<body>
+    
+
+    <main class="mainclass">
+        <section class="sectioncontainer">
+            <div class="aboutcounter">
+                <div class="aboutme">
+                    @foreach (var x in Model)
+                    {
+
+                    <h1 class="about">@x.Anabaslik<hr style="width: 25%; border: 1px solid; opacity: 0.2;"></h1>
+
+
+                    <h2 class="baslık1">@x.baslik1</h2>
+                    <p style="font-size: 20px; margin-bottom: 60px;">
+
+                        @x.aciklama1
+
+                    </p>
+                    <h2 class="baslık1">@x.baslik2</h2>
+                    <p style="font-size: 20px;margin-bottom: 60px;">
+                        @x.aciklama2
+                    </p>
+
+                    <h1 class="baslık1">@x.baslik3</h1>
+                    <br>
+                    <p style="font-size: 20px;margin-bottom: 60px;">
+                        @x.aciklama3
+                    </p>
+
+                    <h1 class="baslık1">@x.baslik4</h1>
+                    <br>
+                    <p style="font-size: 20px;margin-bottom: 60px;">
+                        @x.aciklama4
+                    </p>
+
+                    <h1 class="baslık1">@x.baslik5</h1>
+                    <br>
+                    <p style="font-size: 20px;">
+                        @x.aciklama5
+                    </p>
+                    }
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    
+</body>
+</html>

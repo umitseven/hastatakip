@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giris</title>
+    <link rel="stylesheet" href="~/web_HastaTakip/css/style.css">
+    <link rel="favicon" href="~/web_HastaTakip/img/klipartz.com.png" type="image/x-icon">
+    <link rel="favicon2" href="~/web_HastaTakip/img/1077114.png" type="image/x-icon">
+    <link rel="resim" href="~/web_HastaTakip/img/pexels-klaus-nielsen-6303775.jpg">
+    <link rel="icon" type="image/x-icon" href="~/web_HastaTakip/img/Seven.svg">
+
+</head>
+<body class="body1">
+    
+    <div class="container">
+        <img class="resim" src="~/web_HastaTakip/img/pexels-klaus-nielsen-6303775.jpg">
+
+
+        <div><img class="icon1" src="~/web_HastaTakip/img/1077114.png"></div>
+        <div><img class="icon2" src="~/web_HastaTakip/img/klipartz.com.png"></div>
+
+       
+            @using (Html.BeginForm("GirisYap", "AnaSayfa", FormMethod.Post ,new { style = "display: flex; flex-wrap: wrap; justify-content: normal;" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="png1"><img style="width: 150px;" src="~/web_HastaTakip/img/logo1.png"></div>
+                <div style="width: 250px; position: fixed; top: 108px; left: 50%; transform: translate(50%, -20%);">
+                    <img style="width: 250px;" src="~/web_HastaTakip/img/Seven2.svg">
+                </div>
+                <div class="txtb">
+
+                    <input type="text" name="kullaniciAdi" placeholder="Kullanıcı adı">
+                </div>
+
+                <div class="txtb3">
+                    <input type="password" name="sifre" placeholder="Şifre">
+                </div>
+
+                <input type="submit" class="logbtn" value="Giriş">
+            }
+            
+        
+
+    </div>
+</body>
+</html>

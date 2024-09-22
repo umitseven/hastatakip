@@ -1,0 +1,48 @@
+﻿@model HastaTakipWeb.Models.Siniflar.MuayeneBilgileri
+@{
+    ViewBag.Title = "MuayeneBilgisiEkle";
+    Layout = "~/Views/Shared/_DoktorHemsireLayout.cshtml";
+
+}
+@{
+    ViewBag.Title = "Muayene Bilgisi Ekle";
+    var hastaAdi = ViewBag.Adi != null ? ViewBag.Adi.ToString() : string.Empty;
+    var hastaSoyadi = ViewBag.Soyadi != null ? ViewBag.Soyadi.ToString() : string.Empty; 
+    var hastaTc = ViewBag.tc != null ? ViewBag.tc.ToString() : string.Empty;
+}
+
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.HastaAdi, "Hastanın Adı")
+    <input type="text" name="HastaAdi" class="form-control" value="@hastaAdi" />
+    <br />
+    @Html.LabelFor(x => x.HastaSoyadi, "Hastanın Soyadı")
+    <input type="text" name="HastaSoyadi" class="form-control" value="@hastaSoyadi" />
+    <br />
+    @Html.LabelFor(x => x.KimlikNumarası, "Kimlik Numarası")
+    <input type="text" name="KimlikNumarası" class="form-control" value="@hastaTc" />
+    <br />
+    @Html.LabelFor(x => x.DoktorAdi, "İlgili Doktor")
+    <input type="text" name="DoktorAdi" class="form-control" value="DR. @Session["adsoyad"].ToString()" />
+    <br />
+    @Html.LabelFor(x => x.MuayeneTarihi, "Muayene Tarihi")
+    @Html.TextBoxFor(x => x.MuayeneTarihi, new { @class = "form-control" })
+    @*<input type="text" name="DoktorAdi" class="form-control" value=" @MuayeneTarihi.DateTime.Now.ToString("dd/MM/yyyy")" />*@
+    <br />
+    @Html.LabelFor(x => x.Sikayet, "Hasta Şikayeti")
+    @Html.TextBoxFor(x => x.Sikayet, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Bulgular)
+    @Html.TextBoxFor(x => x.Bulgular, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tedavi)
+    @Html.TextBoxFor(x => x.Tedavi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Notlar)
+    @Html.TextBoxFor(x => x.Notlar, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Ekle</button>
+
+</form>
+

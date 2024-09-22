@@ -1,0 +1,36 @@
+.container6 {
+    width: 100%;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+.container7{
+    width: fit-content;
+    height: auto;
+    background-color: #F7F7F7;
+    display: inline-block;
+    margin:auto;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.özgecmis{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    
+}
+
+.bölüm
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}

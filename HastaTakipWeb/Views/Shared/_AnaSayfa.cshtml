@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="font-family" href="~/web_HastaTakip/img/Trebuchet MS.ttf">
+    <link rel="stylesheet" href="~/web_HastaTakip/css/style2.css">
+    <link rel="stylesheet" href="~/web_HastaTakip/css/style3.css">
+    <link rel="stylesheet" href="~/web_HastaTakip/css/style4.css">
+    <link rel="stylesheet" href="~/web_HastaTakip/css/style5.css">
+    <link rel="icon3" href="~/web_HastaTakip/img/Seven.svg">
+    <link rel="icon" type="image/x-icon" href="~/web_HastaTakip/img/Seven.svg">
+    <link rel="facebook" type="image/png" href="~/web_HastaTakip/img/facebook.png">
+    <link rel="instagram" type="image/png" href="~/web_HastaTakip/img/instagram.png">
+    <link rel="twitter" type="image/png" href="~/web_HastaTakip/img/twitter.png">
+    <link rel="linkedin" type="image/png" href="~/web_HastaTakip/img/linkedin.png">
+    <link rel="youtube" type="image/png" href="~/web_HastaTakip/img/youtube.png">
+    <link rel="mailto" type="image/png" href="~/web_HastaTakip/img/mail.png">
+    <link rel="sağlıkbakanlığı" type="image/png" href="~/web_HastaTakip/img/tcsaglıkbakanlı.png">
+    <link rel="dünyasağlıkörgütü" type="image/png" href="~/web_HastaTakip/img/World_Health_Organization_(2).png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+<body>
+    <div class="topnav1">
+        <div class="HOME"><a href="/AnaSayfa/Index/"> <img style="width: 150px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" src="~/web_HastaTakip/img/Seven.svg"></a></div>
+        <div style="padding-right:36px; padding-top: 24px;"><a href="/AnaSayfa/Hakkimizda/">Hakkımızda</a></div>
+        <div style="padding-right:36px; padding-top: 24px;"><a href="/AnaSayfa/Doktorlarimiz/">Doktorlarımız</a></div>
+        <div style="padding-right:36px; padding-top: 24px;"><a href="/AnaSayfa/Iletisim/">İletişim</a></div>
+        <div style="padding-top: 24px; margin-left:auto; padding-right: 132px;"><a href="/AnaSayfa/GirisYap/">Giriş Yap</a></div>
+    </div>
+
+    
+    <div>
+        @RenderBody()
+    </div>
+    
+
+    <footer class="ftrk-posta">
+        <div class="colhh-sm-12">
+            <div>
+                <div>
+                    <a style="text-decoration: none;" class="a2" href="https://www.saglik.gov.tr/">
+                        <img src="~/web_HastaTakip/img/tcsaglikbakanli.png" alt="sağlıkbakanlığı" style="width: 80px; height: 80px;">
+                        <p class="ellipsis100">
+                            T.C Sağlık Bakanlığı
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="colhh-sm-12">
+            <div class="item1">
+                <div>
+                    <a style="text-decoration: none;" class="a2" href="https://www.who.int">
+                        <img src="~/web_HastaTakip/img/World_Health_Organization_(2).png" alt="dünyasağlıkörgütü" style="width: 80px; height: 80px;">
+
+                        <p class="ellipsis100">
+                            Dünya Sağlık Örgütü
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="colhh-sm-12">
+            <div class="abb">
+                <div>
+                    <p style="margin-bottom: 5px;" class="hesapbilgileri">Bizi Takip Edin <hr class="hr1"></p>
+                </div>
+                <div class="iconlar">
+
+                    <div style="margin-right: 20px;border: 2px solid; border-radius: 50%; text-align: center; border-color: #ffffff; width: auto; height: auto;"><a href="https://www.facebook.com/"><img src="~/web_HastaTakip/img/facebook.png" alt="facebook" style="width: 30px; height: 30px;padding: 4px;"></a></div>
+                    <div style="margin-right: 20px;border: 2px solid; border-radius: 50%; text-align: center; border-color: #ffffff; width: auto; height: auto;"><a href="https://www.instagram.com/"><img src="~/web_HastaTakip/img/instagram.png" alt="instagram" style="width: 30px; height: 30px;padding: 5px;"></a></div>
+                    <div style="margin-right: 20px;border: 2px solid; border-radius: 50%; text-align: center; border-color: #ffffff; width: auto; height: auto;"><a href="https://twitter.com/"><img src="~/web_HastaTakip/img/twitter.png" alt="twitter" style="width: 30px; height: 30px;padding: 6px;"></a></div>
+                    <div style="margin-right: 20px;border: 2px solid; border-radius: 50%; text-align: center; border-color: #ffffff; width: auto; height: auto;"><a href="https://www.linkedin.com/"><img src="~/web_HastaTakip/img/linkedin.png" alt="linkedin" style="width: 30px; height: 30px;padding: 4px;"></a></div>
+                    <div style="margin-right: 20px;border: 2px solid; border-radius: 50%; text-align: center; border-color: #ffffff; width: auto; height: auto;"><a href="https://www.youtube.com/"><img src="~/web_HastaTakip/img/youtube.png" alt="youtube" style="width: 30px; height: 30px;padding: 4px;"></a></div>
+                    <div style="margin-right: 20px;border: 2px solid; border-radius: 50%; text-align: center; border-color: #ffffff; width: auto; height: auto;"><a href="mailto:www.gmail.com"><img src="~/web_HastaTakip/img/email.png" alt="mail" style="width: 30px; height: 30px;padding: 4px;"></a></div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<AnaSayfa>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaSayfa.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Seven Sağlık Grubu </title>
+    <style>
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+        /* Yuvarlak slide göstergesi için stil */
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            transform: translateX(-50%);
+        }
+
+            .carousel-indicators li {
+                background-color: #ffffff;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                width: 7px;
+                height: 7px;
+                margin-right: 5px;
+                cursor: pointer;
+                transition: background-color 0.6s ease;
+            }
+
+                .carousel-indicators li.active {
+                    background-color: #3CAEA3; /* Aktif slaytın renk ayarı */
+                }
+    </style>
+</head>
+<body>
+
+
+    <div class="mycontainer">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                @Html.Action("topimage", "AnaSayfa")
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+        </div>
+    </div>
+
+    <main class="mainclass">
+        <section class="sectioncontainer">
+            @foreach (var x in Model)
+            {
+                <div class="bölümbilgileri">
+                    <div class="yazılar">
+
+                        <p>
+                            <h1 style=" padding-bottom:24px;">@x.bölümadi1</h1>
+
+                            @x.aciklama1
+                        </p>
+
+
+                    </div>
+
+                    <div class="resimler">
+
+                        <img style="object-fit: contain;" class="icerikrsm" src="@x.bölümresimleri1">
+
+
+
+                    </div>
+                </div>
+                <div class="bölümbilgileri">
+                    <div class="resimler">
+
+                        <img style="object-fit: contain;" class="icerikrsm" src="@x.bölümresimleri2">
+
+
+                    </div>
+                    <div class="yazılar2">
+
+                        <p>
+                            <h1 style="padding-bottom:24px;">@x.bölümadi2</h1>
+
+                            @x.aciklama2
+                        </p>
+
+
+                    </div>
+                </div>
+                <div class="bölümbilgileri">
+                    <div class="yazılar">
+
+                        <p>
+                            <h1 style="padding-bottom:24px;">@x.bölümadi3</h1>
+
+                            @x.aciklama3
+                        </p>
+
+
+                    </div>
+                    <div class="resimler">
+
+                        <img style="object-fit: contain;" class="icerikrsm" src="@x.bölümresimleri3">
+
+
+                    </div>
+                </div>
+            }
+        </section>
+    </main>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿@model HastaTakipWeb.Models.Siniflar.IlacBilgileri
+@{
+    ViewBag.Title = "IlacBilgiGetir";
+    Layout = "~/Views/Shared/_DoktorHemsireLayout.cshtml";
+}
+
+<br />
+
+@using (Html.BeginForm("IlacBilgisiGüncelle", "Admin", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Ilacid)
+    @Html.LabelFor(x => x.Ilacid, "İlaç Numarası")
+    @Html.TextBoxFor(x => x.Ilacid, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.IlacAdi, "İlaç Adı")
+    @Html.TextBoxFor(x => x.IlacAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.IlacKullanımSekli, "İlaç Kullanım Şekli")
+    @Html.TextBoxFor(x => x.IlacKullanımSekli, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.IlacSahibi, "İlaç Sahibi")
+    @Html.TextBoxFor(x => x.IlacSahibi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.IlaciVerenDoktor, "İlacı Veren Doktor")
+    @Html.TextBoxFor(x => x.IlaciVerenDoktor, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.IlacVerilisTarihi, "İlaç Veriliş Tarihi")
+    @Html.TextBoxFor(x => x.IlacVerilisTarihi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.KimlikNumarası, "Kimlik Numarası")
+    @Html.TextBoxFor(x => x.KimlikNumarası, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+}
+
+

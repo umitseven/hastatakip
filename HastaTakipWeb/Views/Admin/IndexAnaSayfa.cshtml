@@ -1,0 +1,84 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<AnaSayfa>
+@{
+    ViewBag.Title = "IndexAnaSayfa";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<table style="margin-top:50px !important; " class="table table-bordered mt-3">
+    <tr>
+
+        <th>Bölüm Resimleri</th>
+        <th>Bölüm Adı</th>
+        <th>bölüm Açıklaması</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+
+            <td>
+                <p class="text-break">
+                    @x.bölümresimleri1
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.bölümadi1
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.aciklama1
+                </p>
+            </td>
+            <td><a href="/Admin/AnasayfaGetir/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+
+        <tr>
+
+            <td>
+                <p class="text-break">
+                    @x.bölümresimleri2
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.bölümadi2
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.aciklama2
+                </p>
+            </td>
+
+            <td><a href="/Admin/AnasayfaGetir2/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+        <tr>
+
+            <td>
+                <p class="text-break">
+                    @x.bölümresimleri3
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.bölümadi3
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.aciklama3
+                </p>
+            </td>
+
+            <td><a href="/Admin/AnasayfaGetir3/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+    }
+
+</table>

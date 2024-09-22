@@ -1,0 +1,112 @@
+﻿
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="adminpng" href="~/web_HastaTakip/img/adminlogo.jpg">
+    <link rel="logo" href="~/web_HastaTakip/img/logout.png">
+    <link rel="logo2" href="~/web_HastaTakip/img/home.png">
+    <link rel="logo3" href="~/web_HastaTakip/img/doctor.png">
+    <link rel="logo4" href="~/web_HastaTakip/img/mobile.png">
+    <link rel="logo5" href="~/web_HastaTakip/img/back-arrow.png">
+    <link rel="logo6" href="~/web_HastaTakip/img/image-.png">
+    <link rel="logo7" href="~/web_HastaTakip/img/info-button.png">
+    <link rel="logo8" href="~/web_HastaTakip/img/bookmark.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+         document.getElementById('searchInput').addEventListener('input', function () {
+             var searchText = this.value.toLowerCase();
+             var rows = document.querySelectorAll('table tbody tr');
+             rows.forEach(function (row) {
+                 var text = row.textContent.toLowerCase();
+                 if (text.includes(searchText)) {
+                     row.style.display = '';
+                 } else {
+                     row.style.display = 'none';
+                 }
+             });
+         });
+     });
+    </script>
+
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 18%; ">
+
+        <div style="flex-wrap: inherit; display: flex; justify-content: center; margin-bottom: 60px;">
+            <img style="width: 85px;  margin-left: 5%; margin-bottom: 5px;object-fit:cover; margin-top:10px " src="~/web_HastaTakip/img/profile.png"></img>
+            @Html.Action("GirisIsim", "Admin")
+        </div>
+
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/IndexAnaSayfa" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/home.png"></img>
+            Anasayfa
+        </a>
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/Hakkimizda" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/info-button.png"></img>
+            Hakkımızda
+        </a>
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/Iletisim" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/mobile.png"></img>
+            İletişim
+        </a>
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/Doktorlarimiz" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/doctor.png"></img>
+            Doktorlarımız
+        </a>
+
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/TopImage" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/image-.png"></img>
+            Kayan Resimler
+        </a>
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/DoktorHemsire" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/bookmark.png"></img>
+            Doktor-Hemşire Bilgileri
+        </a>
+        <a style="font-size: 15px; font-weight: bold; margin-bottom: 10px; text-decoration: none !important" href="/Admin/SevenSaglikGrubu" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/data-analytics.png"></img>
+            Seven Sağlık Grubu
+        </a>
+        <a style="font-size: 15px; font-weight: bold; text-decoration: none !important" href="/Admin/AdminYetkilendirme" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/user - Kopya.png"></img>
+            Yönetim Paneli
+        </a>
+        <a style="font-size: 15px; font-weight: bold; justify-content: center; display: flex; bottom: 50px; position: absolute; margin-bottom: 20px; text-decoration: none !important" target="_blank" href="/AnaSayfa/Index" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/back-arrow.png"></img>
+            Siteye Git
+        </a>
+        <a style="font-size: 15px; font-weight: bold; color: black; justify-content: center; display: flex; bottom: 0px; position: absolute; margin-bottom: 20px; text-decoration: none !important" href="/AnaSayfa/CikisYap/" class="w3-bar-item w3-button">
+            <img style="width: 20px; margin-right: 5px; margin-bottom: 4px;" src="~/web_HastaTakip/img/logout.png"></img>
+            Çıkış Yap
+        </a>
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left: 25%; padding-right: 10%">
+
+
+
+
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+

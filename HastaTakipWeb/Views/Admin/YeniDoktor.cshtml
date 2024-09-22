@@ -1,0 +1,21 @@
+﻿@model HastaTakipWeb.Models.Siniflar.Doktorlar
+@{
+    ViewBag.Title = "YeniDoktor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.doktorAdi)
+    @Html.TextBoxFor(x => x.doktorAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.doktorSoyadi)
+    @Html.TextBoxFor(x => x.doktorSoyadi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Uzmanlık)
+    @Html.TextBoxFor(x => x.Uzmanlık, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Ekle</button>
+
+</form>
+

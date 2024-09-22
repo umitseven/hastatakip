@@ -1,0 +1,33 @@
+﻿<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+@{
+    ViewBag.Title = "PDFOLUSTUR";
+    Layout = null;
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Soyadı</th>
+            <th>Cinsiyeti</th>
+            <th>Doğum Tarihi</th>
+            <th>Telefon Numarası</th>
+            <th>Kimlik Numarası</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Ad</td>
+                <td>@x.Soyad</td>
+                <td>@x.Cinsiyet</td>
+                <td>@x.DogumTarihi.Date.ToString("dd/MM/yyyy")</td>
+                <td>@x.TelefonNumarası</td>
+                <td>@x.KimlikNumarası</td>
+            </tr>
+        }
+    </tbody>
+</table>

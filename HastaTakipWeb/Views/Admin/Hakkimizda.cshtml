@@ -1,0 +1,130 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Hakkimizda";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+
+<table style="margin-top:50px !important; " class="table table-bordered mt-3">
+    @foreach (var x in Model)
+    {
+        <tr>
+
+            <th style="text-align:center">Bölüm Başlığı</th>
+            <th style="text-align:center">Güncelle</th>
+        </tr>
+        <tr>
+
+            <td style="vertical-align: middle; text-align: center">
+                <p class="text-break">
+                    @x.Anabaslik
+                </p>
+            </td>
+
+
+            <td><a href="/Admin/HakkimizdaGetir/@x.id" style="justify-content:center; width:50%; display:flex; margin:auto" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+    }
+</table>
+<table style="margin-top:50px !important; " class="table table-bordered mt-3">
+    <tr>
+        <th>Bölüm Adı</th>
+        <th>bölüm Açıklaması</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+
+
+        <tr>
+
+            <td>
+                <p class="text-break">
+                    @x.baslik1
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.aciklama1
+                </p>
+            </td>
+
+            <td><a href="/Admin/HakkimizdaGetir2/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+        <tr>
+
+            <td>
+                <p class="text-break">
+                    @x.baslik2
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.aciklama2
+                </p>
+            </td>
+
+
+            <td><a href="/Admin/HakkimizdaGetir3/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+        <tr>
+
+            <td>
+                <p class="text-break">
+                    @x.baslik3
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.aciklama3
+                </p>
+            </td>
+
+
+            <td><a href="/Admin/HakkimizdaGetir4/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+        <tr>
+
+            <td>
+                <p class="text-break">
+                    @x.baslik4
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.aciklama4
+                </p>
+            </td>
+
+
+            <td><a href="/Admin/HakkimizdaGetir5/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+        <tr>
+
+            <td>
+                <p class="text-break">
+                    @x.baslik5
+                </p>
+            </td>
+            <td>
+                <p class="text-break">
+                    @x.aciklama5
+                </p>
+            </td>
+
+
+            <td><a href="/Admin/HakkimizdaGetir6/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+    }
+
+</table>

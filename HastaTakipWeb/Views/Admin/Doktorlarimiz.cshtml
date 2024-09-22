@@ -1,0 +1,49 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<Doktorlar>
+@{
+    ViewBag.Title = "Doktorlarimiz";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<input style="width: auto !important; float: right; margin-top: 20px; margin-bottom: 40px;" type="text" id="searchInput" class="form-control" placeholder="Doktor Ara...">
+<a style="margin-bottom:10px !important;margin-top:20px" href="~/Admin/YeniDoktor/" class="btn btn-success">Yeni Doktor</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Doktor İsimleri</th>
+            <th>Doktor Soyisimleri</th>
+            <th>Doktor Uzmanlıkları</th>
+            <th style="vertical-align: middle; text-align: center">Güncelle</th>
+            <th style="vertical-align: middle; text-align: center">Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>
+                    <p class="text-break">
+                        @x.doktorAdi
+                    </p>
+                </td>
+                <td>
+                    <p class="text-break">
+                        @x.doktorSoyadi
+                    </p>
+                </td>
+
+                <td>
+                    <p class="text-break">
+                        @x.Uzmanlık
+                    </p>
+                </td>
+
+                <td style="vertical-align: middle; text-align: center"><a href="/Admin/DoktorlarimizGetir/@x.id" class="btn btn-primary">Güncelle</a></td>
+                <td style="vertical-align: middle; text-align: center"><a href="/Admin/DoktorSil/@x.id" class="btn btn-danger">Sil</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

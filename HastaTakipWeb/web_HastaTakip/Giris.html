@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giris</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="favicon" href="img/klipartz.com.png"type="image/x-icon">
+    <link rel ="favicon2" href="img/1077114.png"type="image/x-icon">
+    <link rel="resim" href="img/pexels-klaus-nielsen-6303775.jpg">
+    <link rel="icon" type="image/x-icon" href="img/Seven.svg">
+    
+</head>
+<body class="body1">
+    <script>
+        function goToLoginPage() {
+            window.location.href = "anasayfa.html";
+        }
+
+        function goToRegisterPage() {
+            window.location.href = "kayitol.html";
+        }
+    </script>
+    <div class="container">
+        <img class="resim" src="img/pexels-klaus-nielsen-6303775.jpg">
+        
+            
+            <div><img class ="icon1" src="img/1077114.png"></div>
+            <div><img class="icon2" src="img/klipartz.com.png"></div>
+            
+            <form>
+                <div class="png1" ><img style="width: 150px;" src="img/logo1.png"></div>
+                <div style="width: 250px;position: absolute;top: 108px;left: 65%;">
+                    <img style="width: 250px;" src="img/Seven2.svg">
+                </div>
+                <div class="txtb">
+                    
+                    <input type="text" placeholder="Kullanıcı adı">
+                </div> 
+
+                <div class="txtb3">
+                    <input type="password" placeholder="Şifre">
+                </div>
+
+                <input type="submit" class="logbtn" value="Giriş" onclick="goToLoginPage()">
+                <input type="button" class="logbtn2" value="Kayıt Ol" onclick="goToRegisterPage()">
+            </form>
+        
+    </div>
+</body>
+</html>

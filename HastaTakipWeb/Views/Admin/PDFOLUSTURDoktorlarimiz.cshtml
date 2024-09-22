@@ -1,0 +1,33 @@
+﻿<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+@{
+    ViewBag.Title = "PDFOLUSTURDoktorlarimiz";
+    Layout = null;
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Soyad</th>
+            <th>Uzmanlık</th>
+            <th>Poliklinik</th>
+            <th>Telefon</th>
+            <th>Kimlik Numarası</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Ad</td>
+                <td>@x.Soyad</td>
+                <td>@x.Uzmanlık</td>
+                <td>@x.Poliklinik</td>
+                <td>@x.Telefon</td>
+                <td>@x.KimlikNumarası</td>
+            </tr>
+        }
+    </tbody>
+</table>

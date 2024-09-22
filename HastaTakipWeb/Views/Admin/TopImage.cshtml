@@ -1,0 +1,62 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<TopImage>
+@{
+    ViewBag.Title = "TopImage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<table style="margin-top:50px !important; " class="table table-bordered mt-3">
+    <tr>
+        <th>Resimler</th>
+        <th style="vertical-align: middle; text-align: center">Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>
+                <p class="text-break">
+                    @x.resim
+                </p>
+            </td>
+            <td style="vertical-align: middle; text-align: center"><a href="/Admin/TopImageGetir/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+        <tr>
+            <td>
+                <p class="text-break">
+                    @x.resim2
+                </p>
+            </td>
+            <td style="vertical-align: middle; text-align: center"><a href="/Admin/TopImageGetir2/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+        <tr>
+            <td>
+                <p class="text-break">
+                    @x.resim3
+                </p>
+            </td>
+            <td style="vertical-align: middle; text-align: center"><a href="/Admin/TopImageGetir3/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+        <tr>
+            <td>
+                <p class="text-break">
+                    @x.resim4
+                </p>
+            </td>
+            <td style="vertical-align: middle; text-align: center"><a href="/Admin/TopImageGetir4/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+        <tr>
+            <td>
+                <p class="text-break">
+                    @x.resim5
+                </p>
+            </td>
+            <td style="vertical-align: middle; text-align: center"><a href="/Admin/TopImageGetir5/@x.id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+
+    }
+</table>
+

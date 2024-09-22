@@ -1,0 +1,80 @@
+﻿@using HastaTakipWeb.Models.Siniflar
+@model List<MuayeneBilgileri>
+@{
+    ViewBag.Title = "MuayeneBilgileri";
+    Layout = "~/Views/Shared/_DoktorHemsireLayout.cshtml";
+}
+
+<input style="width: auto !important; float: right; margin-top: 20px; margin-bottom: 40px;" type="text" id="searchInput" class="form-control" placeholder="Hasta Ara...">
+
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Hasta Adı</th>
+            <th>Hasta Soyadı</th>
+            <th>Doktor Adı</th>
+            <th>Şikayet</th>
+            <th>Bulgular</th>
+            <th>Tedavi</th>
+            <th>Notlar</th>
+            <th>Muayene Tarihi</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;">
+                        @x.HastaAdi
+                    </p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.HastaSoyadi
+                    </p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.DoktorAdi
+                    </p>
+
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.Sikayet
+                    </p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.Bulgular
+                    </p>
+                </td>
+
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.Tedavi
+                    </p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.Notlar
+                    </p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.MuayeneTarihi.Date.ToString("dd/MM/yyyy")
+                    </p>
+                </td>
+                
+
+
+                
+            </tr>
+        }
+    </tbody>
+</table>
+

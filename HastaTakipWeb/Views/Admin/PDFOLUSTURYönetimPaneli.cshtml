@@ -1,0 +1,29 @@
+﻿<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+@{
+    ViewBag.Title = "PDFOLUSTURYönetimPaneli";
+    Layout = null;
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Kullanıcı Adı</th>
+            <th>Şifre</th>
+            <th>Ad Soyad</th>
+            <th>Yetki</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.kullaniciAdi</td>
+                <td>@x.sifre</td>
+                <td>@x.adSoyad</td>
+                <td>@x.Yönetimid</td>
+            </tr>
+        }
+    </tbody>
+</table>

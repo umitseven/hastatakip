@@ -1,0 +1,78 @@
+﻿
+@using HastaTakipWeb.Models.Siniflar
+@model List<IlacBilgileri>
+@{
+    ViewBag.Title = "IlacBilgileriliste";
+    Layout = "~/Views/Shared/_DoktorHemsireLayout.cshtml";
+}
+
+<input style="width: auto !important; float: right; margin-top: 20px; margin-bottom: 40px;" type="text" id="searchInput" class="form-control" placeholder="Hasta Ara...">
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>İlacın Adı</th>
+            <th>İlacın Kullanım Şekli</th>
+            <th>İlac Sahibi</th>
+            <th>İlaci veren Doktor</th>
+            <th>İlacın Veriliş Tarihi</th>
+            <th>KimlikNumarası</th>
+
+            <th style="vertical-align: middle; text-align: center">Güncelle</th>
+            <th style="vertical-align: middle; text-align: center">Sil</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;">
+                        @x.IlacAdi
+                    </p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.IlacKullanımSekli
+                    </p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.IlacSahibi
+                    </p>
+
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.IlaciVerenDoktor
+                    </p>
+
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.IlacVerilisTarihi.Date.ToString("dd/MM/yyyy")
+                    </p>
+
+                </td>
+                <td style="vertical-align: middle;">
+                    <p style="margin: 0;" class="text-wrap">
+                        @x.KimlikNumarası
+                    </p>
+
+                </td>
+
+
+
+                <td style="vertical-align: middle; text-align: center"><a href="/Admin/IlacBilgiGetir/@x.Ilacid" class="btn btn-primary">güncelle</a></td>
+                <td style="vertical-align: middle; text-align: center"><a href="/Admin/IlacBilgisiSil/@x.Ilacid" class="btn btn-danger">Sil</a></td>
+            </tr>
+
+
+        }
+    </tbody>
+</table>
+
+
+

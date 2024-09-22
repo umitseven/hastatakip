@@ -1,0 +1,19 @@
+﻿@model HastaTakipWeb.Models.Siniflar.TopImage
+
+@{
+    ViewBag.Title = "TopImageGetir5";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+@using (Html.BeginForm("TopImageGüncelle5", "admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.resim5,"Resim URL")
+    @Html.TextBoxFor(x => x.resim5, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+}

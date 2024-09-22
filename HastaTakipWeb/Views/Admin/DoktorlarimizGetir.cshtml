@@ -1,0 +1,24 @@
+﻿@model HastaTakipWeb.Models.Siniflar.Doktorlar
+@{
+    ViewBag.Title = "DoktorlarimizGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("DoktorGüncelle", "admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.doktorAdi,"Doktor Adı")
+    @Html.TextBoxFor(x => x.doktorAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.doktorSoyadi,"Doktor Soyadı")
+    @Html.TextBoxFor(x => x.doktorSoyadi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Uzmanlık,"Uzmanlık Alanı")
+    @Html.TextBoxFor(x => x.Uzmanlık, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+}
+
